@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap');
+
+
+:root {
+    --bg: #8a70d8;
+--bg2: #50216c;
+--text: #333;
+--btn: #df8dd1;
+}
+
+
+body.dark {
+    --bg: #0f2027;
+--bg2: #203a43;
+--text: #f1f1f1;
+--btn: #00c6ff;
+   
+ 
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Fredoka', sans-serif;
+    background: linear-gradient(180deg, var(--bg), var(--bg2));
+    color: var(--text);
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+
+h1 {
+
+    margin: 0;
+}
+
+
+select,
+input {
+    width: min(90%, 300px);
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+}
+
+.buttons button,
+.toggle {
+    background: var(--btn);
+    border: none;
+    border-radius: 14px;
+    padding: 10px 18px;
+    font-size: 15px;
+    margin: 6px;
+    cursor: pointer;
+}
+
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.message {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.attempts {
+    margin-top: 8px;
+}
+
+
+canvas {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+}
+
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+}

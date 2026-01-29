@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number – Fun Game</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>🎈 Guess the Number 🎈</h1>
+        <button class="toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    </header>
+
+    <main>
+        <p id="levelText">Choose a level and guess the magic number ✨</p>
+
+
+        <select id="level" onchange="setLevel()">
+            <option value="easy">🐣 Easy (1–50)</option>
+            <option value="medium" selected>🦄 Medium (1–100)</option>
+            <option value="hard">🚀 Hard (1–500)</option>
+        </select>
+
+
+        <input type="number" id="guessInput" placeholder="Type your guess 🎯" />
+
+
+        <div class="buttons">
+            <button onclick="checkGuess()">🎲 Guess</button>
+            <button onclick="showHint()">💡 Hint</button>
+            <button onclick="resetGame()">🔄 Reset</button>
+        </div>
+        <div class="message" id="message"></div>
+        <div class="attempts" id="attempts">Attempts: 0</div>
+    </main>
+
+
+    <canvas id="confetti"></canvas>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
